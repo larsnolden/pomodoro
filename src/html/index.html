@@ -7,5 +7,11 @@
 {% extends 'layouts/application.html' %}
 
 {% block content %}
-  <h1 data-module="example">Hello World!</h1>
+<div class="clock">
+  <svg viewBox="0 0 1000 1000">
+    <circle transform="rotate(-90, 95, 95)" class="outer" cx="70" cy="120" r="100">
+  </svg>
+    <div class="timer">52:41</div>
+    <button class="plps"></button>
+</div>
 {% endblock %}
