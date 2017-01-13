@@ -1,17 +1,24 @@
-{#
-  Nunjucks Templating!
-  Homepage: https://mozilla.github.io/nunjucks/
-  Docs: https://mozilla.github.io/nunjucks/api.html
-#}
-
 {% extends 'layouts/application.html' %}
 
 {% block content %}
-<div class="clock">
-  <svg viewBox="0 0 1000 1000">
-    <circle transform="rotate(-90, 95, 95)" class="outer" cx="70" cy="120" r="100">
-  </svg>
-    <div class="timer">52:41</div>
-    <button class="plps"></button>
+<div class="wrapper">
+  <div class="clock">
+    <svg height="400" width="400">
+      <circle  transform="rotate(-90, 200, 200)" id="outer" class="outer" cx="200" cy="200" r="190" >
+    </svg>
+      <div data-module="time" class="timer">52:41</div>
+      <button id="playButton" class="playButton roundButton">p</button>
+  </div>
+
+  <div class='task'>
+    <div class='rowGroup'>
+      <button id="playButton" class='playButton roundButton'>p</button>
+      <button class='plus roundButton'>pl</button>
+      <button class='minus roundButton'>mi</button>
+      <input class='title'>Title 1</input>
+    </div>
+  </div>
 </div>
+<i class="fa fa-bar-chart" aria-hidden="true"></i>
+
 {% endblock %}
